@@ -1,45 +1,38 @@
-# SafeID Masker 🛡️
+# 🔐 SafeID Masker – Personal Information Masking Tool
 
-A Flask-based web tool to detect and mask personal information like SSNs and names from scanned ID documents.
+A web-based application developed for a hackathon challenge that detects and masks sensitive personal information from scanned ID documents, including Social Security Numbers (SSNs) and names. The tool is built using Flask, OCR, and image processing libraries to ensure data privacy in document handling.
 
-## 🚀 Features
+## 🚀 Problem Statement
 
-- Upload scanned ID images
-- Detect SSNs (e.g., 123-45-6789) and Names
-- Mask them with black rectangles
-- Simple Flask web interface
-- Download final masked image
+In an era where privacy and security are paramount, protecting sensitive personal information is a critical need. This hackathon project addresses that challenge by creating a tool that:
 
-## 🧰 Tech Stack
+- Accepts digital images of scanned ID documents
+- Detects sensitive information such as:
+  - Social Security Numbers (SSNs)
+  - Names
+- Applies masking (black rectangles) to hide this information
+- Provides a downloadable or displayable masked image to the user
 
-- Python
-- Flask
-- Tesseract OCR
-- OpenCV
-- HTML/CSS
+## 🌐 Features
 
-## 📦 Setup Instructions
+- 📤 Upload scanned ID images through a web interface
+- 🔍 Extract text from images using Optical Character Recognition (Tesseract OCR)
+- 🧠 Identify sensitive information using Regex and optional Named Entity Recognition (NER)
+- 🖤 Mask detected regions using OpenCV with black rectangles
+- 📥 Download or preview the masked image
 
-1. Clone the repository:
+## 🛠 Tech Stack
 
-   git clone https://github.com/your-username/SafeID-Masker.git
-   cd SafeID-Masker
+| Component         | Technology                     |
+|------------------|---------------------------------|
+| Backend          | Python, Flask                   |
+| OCR              | Tesseract OCR                   |
+| Image Processing | OpenCV, Pillow                  |
+| Text Detection   | Regex, SpaCy (optional for NER) |
+| Frontend         | HTML, CSS                       |
+| Deployment       | Localhost or Render/Heroku      |
 
-2. Create a virtual environment (optional but recommended):
 
-   python -m venv venv  
-   source venv/bin/activate  (or venv\Scripts\activate on Windows)
 
-3. Install dependencies:
-
-   pip install -r requirements.txt
-
-4. Run the app:
-
-   python app.py
-
-Then visit http://127.0.0.1:5000 in your browser.
-
-## 🗂 Project Structure
 
 
